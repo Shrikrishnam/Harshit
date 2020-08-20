@@ -1,0 +1,34 @@
+<header class="bg-dark text-white py-2 px-4 border-white border-bottom d-flex align-items-center">
+	<div class="logo">
+	</div>
+	<!-- <h1 class="text-center">Fitness Trainer Appointment</h1> -->
+</header>
+<nav class="navbar navbar-expand-md navbar-light bg-secondary border-dark border-bottom">
+	<button class="navbar-toggler border-white" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+		aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		<div class="navbar-nav w-100 d-flex justify-content-between">
+			<a class="nav-link btn btn-dark" (click)="landingpage()" routerLinkActive="active-link">Home</a>
+			<a class="nav-link btn btn-dark" (click)="placeAppointment()">Place Appointment</a>
+			<a class="nav-link btn btn-dark" (click)="viewAppointment()">View Appointment</a>
+			<a class="nav-link btn btn-dark" (click)="contactUspage()">Contact Us</a>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="sidebar col-md-3 border-dark border-right bg-light pt-5 pb-5 pb-md-0">
+			<h3 class="text-center">Menu</h3>
+			<a class="btn btn-outline-dark w-100 mt-2 mt-md-4" (click)="landingpage()">Home</a>
+			<a class="btn btn-outline-dark w-100 mt-2 mt-md-4" (click)="placeAppointment()">Place Appointment</a>
+			<a class="btn btn-outline-dark w-100 mt-2 mt-md-4" (click)="viewAppointment()">View Appointment</a>
+			<a class="btn btn-outline-dark w-100 mt-2 mt-md-4" (click)="contactUspage()">Contact Us</a>
+		</div>
+		<div class="main-content col-md-9 p-md-5">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+</div>
